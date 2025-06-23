@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RECOMMENDATIONS</title>
+    <link href="recommendations.css" rel="stylesheet" type="text/css">
+    <script src="recommendations.js" defer></script>
+</head>
+<body>
+    <canvas id="bg-canvas" style="position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:-1;"></canvas>
+
+    <div class="side-nav">
+        <header class="core-recommendations-title">
+            <nav class="nav">
+                <ul>
+                    <li><a href="../home/home.html">HOME</a></li>
+                    <li><a href="../profile/pfp.html">PROFILE</a></li>
+                    <li><a href="../hobbies/hobbies.html">HOBBIES</a></li>
+                    <li><a href="../memories/memories.html">MEMORIES</a></li>
+                    <li><a href="../contact/contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+    <h1 class="centered-header">RECOMMENDATIONS</h1>
+
+    <div class="content">
+        <div class="recommendations-container">
+            <div class="recommendation-item movie-item">
+                <a href="https://www.netflix.com/jp-en/title/70032594" target="_blank" rel="noopener noreferrer">
+                    <img src="../image/Prideandprejudiceposter.jpg" alt="MOVIE ">
+                </a>
+                <p>Movie adaption of "Pride and Prejudice"</p>
+                <div class="popup-desc">A story about a young lady falling in love with an aristocrat back in the 18th century</div>
+            </div>
+            <div class="recommendation-item song-item">
+                <a href="https://www.youtube.com/watch?v=j-RpvIuazmc&list=RDj-RpvIuazmc&start_radio=1&pp=0gcJCWMEOCosWNin" target="_blank" rel="noopener noreferrer">
+                    <img src="../image/PowderandEkkoArcane2Poster_1_1024x1024.png" alt="song">
+                </a>
+                <p>Favourite song of the moment.</p>
+                <div class="popup-desc">A song about being in love with your very own nemesis</div>
+            </div>
+        </div>
+        <div class="blur-overlay"></div>
+    </div>
+</body>
+</html>

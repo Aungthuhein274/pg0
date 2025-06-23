@@ -1,0 +1,180 @@
+/*
+  Profile Page Styles
+  Organized for clarity and maintainability
+*/
+
+html {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: #C4C3B9;
+    overflow: hidden !important;
+}
+
+/* Navigation Bar */
+nav {
+    position: fixed;
+    top: 1rem;
+    right: 2.5rem;
+    background: #4B4A4A;
+    z-index: 100;
+    box-sizing: border-box;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    min-height: 56px;
+    min-width: 220px;
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 8px 18px;
+    border-radius: 8px;
+    background: none;
+    transition: background 0.2s, color 0.2s;
+}
+nav ul li a:hover {
+    background: #837060;
+    color: #fff;
+}
+
+/* Main Layout */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
+.left-section, .right-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+}
+
+/* Profile Content */
+.profile-content {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile {
+    width: 520px;
+    height: 600px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.18);
+}
+
+/* Info Section */
+.profile-header {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 2.1rem;
+    letter-spacing: 0.1em;
+    width: 100%;
+    text-align: center;
+}
+.info {
+    font-size: 1.4rem;
+    color: #333;
+    margin-top: 0;
+    text-align: center;
+    max-width: 480px;
+}
+
+/* Animations */
+@keyframes scaleOnly {
+  0% { transform: scale(0.92); }
+  100% { transform: scale(1); }
+}
+.animated-scale {
+    animation: scaleOnly 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform: scale(0.96);
+}
+.profile-header, .profile-content, .profile, .info, .nav, .nav ul, .nav ul li a {
+    transition: transform 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+@keyframes scaleIn {
+    0% { transform: scale(0.95); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+.main-container.animate-in {
+    animation: scaleIn 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes navLinkIn {
+    0% { transform: translateY(-30px) scale(0.9); opacity: 0; }
+    100% { transform: translateY(0) scale(1); opacity: 1; }
+}
+.nav.animate-in li {
+    animation: navLinkIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+.nav.animate-in li:nth-child(1) { animation-delay: 0.1s; }
+.nav.animate-in li:nth-child(2) { animation-delay: 0.2s; }
+.nav.animate-in li:nth-child(3) { animation-delay: 0.3s; }
+.nav.animate-in li:nth-child(4) { animation-delay: 0.4s; }
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+        width: 100vw;
+        height: 100vh;
+    }
+    .left-section { order: 1; }
+    .right-section { order: 2; }
+    nav {
+        order: 0;
+        position: static;
+        margin: 1rem auto 0 auto;
+        padding: 1rem 1.5rem;
+        min-width: 0;
+        width: fit-content;
+    }
+    .profile-header {
+        font-size: 1.7rem;
+        margin-top: -4rem;
+        margin-bottom: 0.05rem;
+        align-self: center;
+        width: 100%;
+        text-align: center;
+    }
+    .profile {
+        width: 300px;
+        height: 350px;
+    }
+    .profile-content { font-size: 1rem; }
+    .info {
+        font-size: 1rem;
+        max-width: 320px;
+    }
+    nav ul { gap: 16px; }
+    nav ul li a {
+        font-size: 0.95rem;
+        padding: 6px 12px;
+    }
+    .animated-scale {
+        animation: scaleOnly 0.5s cubic-bezier(0.4, 0.2, 0.2, 1);
+    }
+}
