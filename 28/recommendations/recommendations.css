@@ -1,13 +1,17 @@
 .side-nav {
     width: 100vw;
+    min-height: 64px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background: none;
+    background: #4B4A4A;
     margin: 0;
     padding: 0;
     position: static;
     z-index: 1;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    border-radius: 0 0 18px 18px;
 }
 
 .core-recommendations-title {
@@ -17,16 +21,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #4B4A4A;
-    border-radius: 18px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
     margin: 0;
-    padding: 1.2rem 2.5rem;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transform: none;
+    padding: 0.7rem 2.5rem;
+    position: static;
     z-index: 10;
+    height: 64px;
 }
 
 .core-recommendations-title .nav {
@@ -40,12 +42,13 @@
     width: 100%;
     display: flex;
     flex-direction: row;
-    gap: 18px;
+    gap: 32px;
     margin: 0;
     padding: 0;
     list-style: none;
     align-items: center;
     justify-content: center;
+    height: 100%;
 }
 
 .core-recommendations-title .nav ul li a {
@@ -224,9 +227,11 @@
 body {
     opacity: 0;
     animation: fadeSlideIn 0.8s cubic-bezier(.4,1.4,.6,1) 0.1s forwards;
+    margin: 0;
+    padding: 0;
 }
 
-.core-recommendations-title {
+core-recommendations-title {
     opacity: 0;
     animation: fadeSlideIn 0.8s cubic-bezier(.4,1.4,.6,1) 0.3s forwards;
 }
